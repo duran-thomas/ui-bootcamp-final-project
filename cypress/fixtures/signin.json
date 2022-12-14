@@ -1,0 +1,20 @@
+[
+    {
+        "userType": "valid",
+        "email": "duran@user.com",
+        "password": "NewPassword!23",
+        "expectedUrl": "https://ui-automation-camp.vercel.app/products"
+    },
+    {
+        "userType": "invalid password",
+        "email": "duran@user.com",
+        "password": "12345678",
+        "message": "Wrong email or password."
+    },
+    {
+        "userType": "invalid username",
+        "email": "duran",
+        "password": "NewPassword!23",
+        "message": "Email is invalid"
+    }
+]
