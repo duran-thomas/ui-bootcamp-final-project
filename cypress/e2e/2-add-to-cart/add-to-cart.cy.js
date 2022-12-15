@@ -24,7 +24,11 @@ describe('Verify that a user can', () => {
         mainPage.elements.addToCartBtn(product).click()
         cy.visit('/products#/cart')
         cartPage.elements.continueShopping().click()
-        mainPage.elements.addToCartBtn(product + 1).click()
+        if(product === 22){
+            mainPage.elements.addToCartBtn(product - 1).click()
+        }else{
+            mainPage.elements.addToCartBtn(product + 1).click()
+        }
         cy.visit('/products#/cart')
         cartPage.elements.shoppingBagIcon().should('have.text', ' 2 ')
     })
