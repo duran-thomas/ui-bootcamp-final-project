@@ -3,7 +3,7 @@ import mainPage from './../../page/mainPage'
 import cartPage from './../../page/cartPage'
 
 describe('Verify that a user can', () => {
-
+ 
     const product = Math.floor(Math.random() * 22) + 1
     beforeEach(() => {
         cy.visit('/')
