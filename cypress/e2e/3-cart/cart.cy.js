@@ -16,7 +16,7 @@ describe('Verify that ', () => {
         cartPage.elements.increaseItemQuantityBtn().click()
         cartPage.elements.itemQuantityCount().should('have.text', '2')
     })
-    it('clicking the decrease quantity button increases the product quantity', () => {
+    it('clicking the decrease quantity button decreases the product quantity', () => {
         mainPage.elements.addToCartBtn(product).should('include.text', 'Add To Cart')
         cy.wait(3000)
         mainPage.elements.addToCartBtn(product).click()
