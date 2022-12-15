@@ -3,7 +3,7 @@ import loginPage from './../../page/loginPage'
 
 describe('Should attempt to login with', () => {
     beforeEach(() => {
-        cy.visit('https://ui-automation-camp.vercel.app')
+        cy.visit('/')
     })
 
     loginData.forEach(element => {
