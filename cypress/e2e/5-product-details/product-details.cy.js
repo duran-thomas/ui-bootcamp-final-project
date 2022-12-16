@@ -28,7 +28,7 @@ describe('Verify that', () => {
         cy.url().should('eq', 'https://ui-automation-camp.vercel.app/products')
         mainPage.elements.headerText().should('be.visible')
     })
-    it.only('the product title is visible on the product details page', () => {
+    it('the product title is visible on the product details page', () => {
         let titleText
         const removeSpaces = (s) => s.replace(/\s/g, '')
         mainPage.elements.singleProductContainer(product)
