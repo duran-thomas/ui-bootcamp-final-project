@@ -13,7 +13,8 @@ class MainPage {
         allProductTitles: () => cy.get('div .css-12qzrsi > div > div.css-n21gh5 > div > div > p.css-1n64n71'),
         allProductCategories: () => cy.get('div .css-12qzrsi > div > div.css-n21gh5 > div > div:nth-child(3) > span'),
         resetBtn : () => cy.get('#reset'),
-        inputSearch : () => cy.get('#search')
+        inputSearch : () => cy.get('#search'),
+        contactNavBarLink : () => cy.get('#top-contact')
     }
 
     addToCart(){
