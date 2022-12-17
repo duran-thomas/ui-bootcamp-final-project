@@ -6,7 +6,12 @@ class MainPage {
         productPrice : (index) => cy.get(`div .css-12qzrsi > div:nth-child(${index}) > div.css-n21gh5 > div > div:nth-child(3) > p.css-0`),
         productContainer : () => cy.get('.chakra-stack.css-uaqjf'),
         singleProductContainer : (index) => cy.get(`div .css-12qzrsi > div:nth-child(${index})`),
-        headerText : () => cy.get('.css-122rm4p')
+        headerText : () => cy.get('.css-122rm4p'),
+        sortOptions : () => cy.get('#sort'),
+        categoryOptions : () => cy.get('#category'),
+        allProductPrices: () => cy.get('div .css-12qzrsi > div > div.css-n21gh5 > div > div:nth-child(3) > p.css-0'),
+        allProductCategories: () => cy.get('div .css-12qzrsi > div > div.css-n21gh5 > div > div:nth-child(3) > span'),
+        resetBtn : () => cy.get('#reset')
     }
 
     addToCart(){
@@ -16,6 +21,18 @@ class MainPage {
         this.elements.addToCartBtn(product).click()
         cy.visit('/products#/cart')
     }
+
+    getPrices() {
+        let prices = [];
+        return new Cypress.Promise((resolve) => {
+          cy.get("p.css-0")
+            .each(($el, $index) => {
+              let price = $el.text().replace("$", "");
+              prices.push(Number(price));
+            })
+            .then(() => resolve(prices));
+        });
+      }
 }
 
 module.exports = new MainPage() 

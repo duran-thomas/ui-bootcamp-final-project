@@ -17,6 +17,9 @@
 import './commands'
 import 'cypress-mochawesome-reporter/register';
 require('@cypress/xpath');
+const chaiSorted = require('chai-sorted');
+chai.use(chaiSorted);
+
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
