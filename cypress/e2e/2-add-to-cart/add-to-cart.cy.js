@@ -32,7 +32,7 @@ describe('Verify that a user can', () => {
         cy.visit('/products#/cart')
         cartPage.elements.shoppingBagIcon().should('have.text', ' 2 ')
     })
-    it.only('add multiple of the same product and it only increased the product quantity', () => {
+    it('add multiple of the same product and it only increased the product quantity', () => {
         mainPage.elements.addToCartBtn(product).should('include.text', 'Add To Cart')
         cy.wait(2000)
         mainPage.elements.addToCartBtn(product).click()
