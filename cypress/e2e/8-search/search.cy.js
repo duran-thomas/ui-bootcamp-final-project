@@ -22,7 +22,7 @@ describe('Verify that ', () => {
         mainPage.elements.inputSearch().type('Random')
         mainPage.elements.allProductTitles().should('not.exist')
     })
-    it.only('a product is displayed for partial searches', () => {
+    it('a product is displayed for partial searches', () => {
         mainPage.elements.inputSearch().type('mac')
         mainPage.elements.allProductTitles().then((title) => {
             expect(title.text()).to.be.equal('Mackbook Pro')
