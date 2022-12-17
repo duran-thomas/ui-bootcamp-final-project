@@ -12,7 +12,7 @@ describe("Verify that a user is able to ", () => {
   it("sort products by price ascending order (low to high)", () => {
     mainPage.elements.sortOptions().select("lowToHigh").invoke("val");
     cy.wait(1000);
-    mainPage.getPrices().then((price) => {
+    mainPage.getProductList('p.css-0').then((price) => {
       expect(price).to.be.sorted();
     });
   });

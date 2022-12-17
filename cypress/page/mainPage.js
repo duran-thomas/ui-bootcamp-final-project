@@ -10,8 +10,10 @@ class MainPage {
         sortOptions : () => cy.get('#sort'),
         categoryOptions : () => cy.get('#category'),
         allProductPrices: () => cy.get('div .css-12qzrsi > div > div.css-n21gh5 > div > div:nth-child(3) > p.css-0'),
+        allProductTitles: () => cy.get('div .css-12qzrsi > div > div.css-n21gh5 > div > div > p.css-1n64n71'),
         allProductCategories: () => cy.get('div .css-12qzrsi > div > div.css-n21gh5 > div > div:nth-child(3) > span'),
-        resetBtn : () => cy.get('#reset')
+        resetBtn : () => cy.get('#reset'),
+        inputSearch : () => cy.get('#search')
     }
 
     addToCart(){
@@ -22,10 +24,10 @@ class MainPage {
         cy.visit('/products#/cart')
     }
 
-    getPrices() {
+    getProductList(selector) {
         let prices = [];
         return new Cypress.Promise((resolve) => {
-          cy.get("p.css-0")
+          cy.get(selector)
             .each(($el, $index) => {
               let price = $el.text().replace("$", "");
               prices.push(Number(price));
