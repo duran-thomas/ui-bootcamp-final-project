@@ -19,7 +19,7 @@ describe('verify that', () => {
         checkoutPage.elements.emailErrorMessage().should('contain', 'This field is required')
         checkoutPage.elements.zipErrorMessage().should('contain', 'This field is required')
     })
-    it('all required fields has to be filled out before moving to payment', () => {
+    it('a user is able to proceed to payment after filling out billing form', () => {
         mainPage.addToCart()
         cartPage.elements.checkoutBtn().click()
         checkoutPage.completeCheckout('Duran', 'duran@user.com', 'Liguanea Avenue', '123', ' ', '12345')
