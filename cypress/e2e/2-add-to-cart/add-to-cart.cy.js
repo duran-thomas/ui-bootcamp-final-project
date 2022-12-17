@@ -3,7 +3,7 @@ import mainPage from './../../page/mainPage'
 import cartPage from './../../page/cartPage'
 
 describe('Verify that a user can', () => {
-
+ 
     const product = Math.floor(Math.random() * 22) + 1
     beforeEach(() => {
         cy.visit('/')
@@ -32,6 +32,7 @@ describe('Verify that a user can', () => {
         cy.visit('/products#/cart')
         cartPage.elements.shoppingBagIcon().should('have.text', ' 2 ')
     })
+
     it('add multiple of the same product and it only increased the product quantity', () => {
         mainPage.elements.addToCartBtn(product).should('include.text', 'Add To Cart')
         cy.wait(2000)

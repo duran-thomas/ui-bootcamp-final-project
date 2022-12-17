@@ -102,3 +102,9 @@ dist
 
 # TernJS port file
 .tern-port
+
+#Mocha awesome report
+cypress/reports
+
+#recordings
+cypress/videos
