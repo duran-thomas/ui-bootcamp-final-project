@@ -42,5 +42,6 @@ describe('Verify that a user can', () => {
         mainPage.elements.addToCartBtn(product).click()
         cy.visit('/products#/cart')
         cartPage.elements.itemQuantityCount().should('have.text', '2')
+        
     })
 })
