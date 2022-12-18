@@ -1,0 +1,36 @@
+[
+    {
+        "usertype": "blank form",
+        "name": "Duran Thomas",
+        "email": " ",
+        "street": "Liguanea Avenue",
+        "apt": 123,
+        "city": " ",
+        "zip": " ",
+        "emailError": "This field is required",
+        "zipError": "This field is required"
+    },
+    {
+        "usertype": "completed billing form",
+        "name": "Duran Thomas",
+        "email": "duran@user.com",
+        "street": "Liguanea Avenue",
+        "apt": 123,
+        "city": " ",
+        "zip": "12345"
+    },
+    {
+        "usertype": "completed checkout flow",
+        "name": "Duran Thomas",
+        "email": "duran@user.com",
+        "street": "Liguanea Avenue",
+        "apt": 123,
+        "city": " ",
+        "zip": "12345",
+        "ccNum": "4242 4242 4242 4242",
+        "ccExpDate": "05/26",
+        "ccCvv": "123",
+        "confirmationText": "Thank you for your order"
+    }
+
+]
