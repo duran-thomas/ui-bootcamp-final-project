@@ -7,6 +7,7 @@ class LoginPage {
         loginBtn : () => cy.get('button[type="submit"]'),
         topErrorMessage : () => cy.get('div .auth0-global-message > span  > span'),
         emailErrorMessage : () => cy.get('div #auth0-lock-error-msg-email .auth0-lock-error-invalid-hint'),
+        passwordErrorMessage : () => cy.get('#auth0-lock-error-msg-password > div'),
 
         signupTabLink : () => cy.get('ul.auth0-lock-tabs > li:nth-child(2)')
 

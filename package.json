@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npx cypress open",
-    "command line": "npx cypress run --browser chrome"
+    "command-line": "npx cypress run --browser chrome"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "@cypress/xpath": "^2.0.3",
+    "@faker-js/faker": "^7.6.0",
     "chai-sorted": "^0.2.0",
     "cypress-iframe": "^1.0.1"
   }
