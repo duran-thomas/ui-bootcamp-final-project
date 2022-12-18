@@ -19,6 +19,7 @@ import 'cypress-mochawesome-reporter/register';
 require('@cypress/xpath');
 const chaiSorted = require('chai-sorted');
 chai.use(chaiSorted);
+import "cypress-mailslurp";
 
 
 // Alternatively you can use CommonJS syntax:

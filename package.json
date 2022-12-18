@@ -19,6 +19,7 @@
   "homepage": "https://github.com/duran-thomas/ui-bootcamp-final-project#readme",
   "devDependencies": {
     "cypress": "^12.0.2",
+    "cypress-mailslurp": "^1.5.0",
     "cypress-mochawesome-reporter": "^3.2.3"
   },
   "dependencies": {

@@ -9,4 +9,10 @@ module.exports = defineConfig({
       require('cypress-mochawesome-reporter/plugin')(on);
     },
   },
+  env: {
+    MAILSLURP_API_KEY: "5338fd8dc2ae9fba79a2ae4e6ae0aed84899996c976310381798b2c2643d0da7"
+  },
+  defaultCommandTimeout: 30000,
+  responseTimeout: 30000,
+  requestTimeout: 30000
 });
