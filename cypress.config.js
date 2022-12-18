@@ -10,8 +10,7 @@ module.exports = defineConfig({
     },
   },
   env: {
-    CYPRESS_MAILSLURP_API_KEY : "cee47b255c6c6be47ca71d644c357c64df32fdbedaea0b914dc0b055a037cc15",
-    MAILSLURP_API_KEY: "cee47b255c6c6be47ca71d644c357c64df32fdbedaea0b914dc0b055a037cc15"
+    MAILSLURP_API_KEY: "5338fd8dc2ae9fba79a2ae4e6ae0aed84899996c976310381798b2c2643d0da7"
   },
   defaultCommandTimeout: 30000,
   responseTimeout: 30000,
